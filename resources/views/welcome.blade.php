@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel escrito por camilo cetina 
+                    Laravel escrito por camilo cetina 22222
                 </div>
 
                 <div class="links">
