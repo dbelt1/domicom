@@ -61860,30 +61860,76 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper_swiper_bundle_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(swiper_swiper_bundle_css__WEBPACK_IMPORTED_MODULE_1__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+
+
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
-
-
 Vue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]);
 var app = new Vue({
   el: '#app',
   data: {
-    mensaje: 'Hola desde vue'
+    mensaje: 'prueba'
   }
 });
-var swiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-container', {
-  slidesPerView: '5',
-  spaceBetween: 10,
-  centeredSlides: true,
-  freeMode: true,
-  loop: true,
-  autoplay: {
-    el: 10000
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
-  }
-});
+
+if (screen.width < 600) {
+  var swiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-container', {
+    slidesPerView: '1',
+    spaceBetween: 10,
+    freeMode: true,
+    loop: true,
+    autoplay: {
+      el: 10000
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
+  });
+} else if (screen.width >= 600 && screen.width < 1024) {
+  var _swiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-container', {
+    slidesPerView: '2',
+    spaceBetween: 10,
+    freeMode: true,
+    loop: true,
+    autoplay: {
+      el: 10000
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
+  });
+} else if (screen.width >= 1024 && screen.width <= 1400) {
+  var _swiper2 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-container', {
+    slidesPerView: '3',
+    spaceBetween: 10,
+    centeredSlides: true,
+    freeMode: true,
+    loop: true,
+    autoplay: {
+      el: 10000
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
+  });
+} else {
+  var _swiper3 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-container', {
+    slidesPerView: '5',
+    spaceBetween: 10,
+    centeredSlides: true,
+    freeMode: true,
+    loop: true,
+    autoplay: {
+      el: 10000
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
+  });
+}
 
 /***/ }),
 
