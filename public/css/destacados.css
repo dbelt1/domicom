@@ -1,0 +1,141 @@
+
+*{
+    margin:0;
+    padding:0;
+}
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+}
+.swiper-container {
+    width: 70%;
+    height: 350px;
+
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    width: 250px;
+    
+
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    /* -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center; */
+}
+
+.product-grid{
+    text-align: center;
+    border-radius: 30px;
+    padding: 3px;
+    
+    width: 100%;
+    height:60%;
+}
+.product-grid .product-image{
+    width: 100%;
+    height:100%;
+    position:relative;
+    overflow:hidden;    
+}
+.product-grid .product-image img{
+    width: 100%;
+    height:100%;
+    transition:all 0.3 ease 0s;
+}
+.product-grid .product-image:hover img{
+    transform:rotate(3deg) scale(1);
+    filter:grayscale(50%);
+}
+.product-grid  .product-sale-label{
+    color:white;
+    background: red;
+    font-size:13px;
+    text-transform: capitalize;
+    line-height:40px;
+    width: 40px;
+    height:40px;
+    border-radius: 50px;
+    position:absolute;
+    top: 10px;
+    left:10px; 
+}
+.product-grid .product-links{
+    background: white;
+    width:150px;
+    padding: 3px 0;
+    margin:0;
+    list-style: none;
+    border-radius: 30px;
+    box-shadow: 0px 0px 5.95px 1.05px rgba(0,0,0,0.06);
+    transform: translateX(-50%);
+    position:absolute;
+    bottom:-100px;
+    left:50%;
+    transition: all 0.3s ease 0s;
+}
+.product-grid:hover .product-links{
+    opacity:0.8;
+    bottom:20px;
+}
+.product-grid:hover .product-links li{
+    margin: 0 2px;
+    display:inline-block;
+
+}
+.product-grid:hover .product-links li a{
+    background:white;
+    color: rgba(75,214,232,1);
+    color: -moz-linear-gradient(left, rgba(75,214,232,1) 0%, rgba(75,214,232,1) 7%, rgba(32,124,229,1) 100%);
+    color: -webkit-gradient(left top, right top, color-stop(0%, rgba(75,214,232,1)), color-stop(7%, rgba(75,214,232,1)), color-stop(100%, rgba(32,124,229,1)));
+    color: -webkit-linear-gradient(left, rgba(75,214,232,1) 0%, rgba(75,214,232,1) 7%, rgba(32,124,229,1) 100%);
+    color: -o-linear-gradient(left, rgba(75,214,232,1) 0%, rgba(75,214,232,1) 7%, rgba(32,124,229,1) 100%);
+    color: -ms-linear-gradient(left, rgba(75,214,232,1) 0%, rgba(75,214,232,1) 7%, rgba(32,124,229,1) 100%);
+    color: linear-gradient(to right, rgba(75,214,232,1) 0%, rgba(75,214,232,1) 7%, rgba(32,124,229,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4bd6e8', endColorstr='#207ce5', GradientType=1 );
+    font-size: 19px;
+    line-height: 35px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    display: block;
+    transition: all 0.3s ease 0s;
+}
+.product-content{
+    
+    margin-top:10px;
+}
+.price{
+    
+    text-align: left;
+    padding: 10px;
+}
+.name-card{
+    text-decoration: none;
+    color:#444;
+}
+.price h4{
+    margin-top:5px;
+    color:red;
+    font-size: 25px;
+    font-weight: 30;
+}
+.offert{
+    color:red;
+}
+

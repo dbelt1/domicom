@@ -3,67 +3,19 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--font awesome-->
+        <script src="https://kit.fontawesome.com/8b808e29d0.js" crossorigin="anonymous"></script>
 
         <title>Laravel</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
+        <!--styles-->
+        <link rel="stylesheet" href="css/destacados.css">
+        
     </head>
     <body>
+        
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -79,22 +31,70 @@
                 </div>
             @endif
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
+           
         </div>
+        
+        <div id="app">
+            <example-component></example-component>
+            @{{mensaje}}
+        </div>
+        
+   <!-- Slider main container -->
+<div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide" >
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href=""><img class="pic-1" src="img/celular.jpg" ></a>
+                    <span class="product-sale-label">Nuevo</span>
+                    <ul class="product-links">
+                        <li><a href=""><i class="fas fa-shopping-cart"></i></a></li>
+                        <li><a href=""><i class="fas fa-heart"></i></a></li>
+                        <li><a href=""><i class="fas fa-user"></i></a></li>
+                       
+                    </ul>
+                </div>
+                <div class="product-content">
+                    <h3><small><a href="" class="name-card">Samsung Galaxy Note 10</a></small></h3>
+                    <div class="price">
+                        <p><s><small>$1.000.000</small></s><span class="offert">-10%</span></p>
+                        <h4>$900.000</h4>
+
+                    </div>
+                    
+                   
+                    
+                </div>
+                
+             
+            </div>
+           
+        </div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-slide">Slide 6</div>
+        <div class="swiper-slide">Slide 7</div>
+        <div class="swiper-slide">Slide 8</div>
+        <div class="swiper-slide">Slide 9</div>
+        ...
+    </div>
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+</div>
+
+
+        <script src="{{ mix('js/app.js') }}"></script>
+
+
+
+
     </body>
 </html>
